@@ -1,44 +1,47 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { CheckIcon } from '@radix-ui/react-icons'
 
+import { Typography } from '../typography'
+
 import s from './checkbox.module.scss'
 
-export type CheckboxProps = {
-  className?: string
+type CheckboxPrimerProps = {
+  label?: string
+  asChild?: boolean
+  defaultChecked?: boolean
   checked?: boolean
-  onChange?: (checked: boolean) => void
+  onCheckedChange?: () => void
   disabled?: boolean
   required?: boolean
-  label?: string
-  id?: string
+  name?: string
+  value?: string
 }
-export const CustomCheckbox = (props: CheckboxProps) => {
-  // @ts-ignore
-  const { checked, onChange, disabled, required, label, id, className } = props
-
-  return (
-    <form>
-      <div
-        className={label ? s.wrapperWithText : ''}
-        style={{ display: 'flex', alignItems: 'center' }}
+export const CheckBox = ({ checked, label, disabled }: CheckboxPrimerProps) => (
+  <div className={s.container}>
+    <div className={`${s.wrapper} ${disabled && s.disabled}`}>
+      <Checkbox.Root
+        className={s.CheckboxRoot}
+        defaultChecked
+        id="c1"
+        disabled={disabled}
+        checked={checked}
       >
-        <div className={`${s.checkboxWrapper} ${disabled ? s.wrapperDisabled : ''}`}>
-          <Checkbox.Root
-            className={s.checkboxRoot}
-            id={id}
-            onCheckedChange={onChange}
-            checked={checked}
-            disabled={disabled}
-          >
-            <Checkbox.Indicator className={s.checkboxIndicator}>
-              <CheckIcon className={disabled ? `${s.icon} ${s.disabled}` : s.icon} />
-            </Checkbox.Indicator>
-          </Checkbox.Root>
-        </div>
-        <label className={disabled ? `${s.label} ${s.disabled}` : s.label} htmlFor={id}>
+        <Checkbox.Indicator className={`${s.CheckboxIndicator} ${disabled && s.disabled}`}>
+          <CheckIcon />
+        </Checkbox.Indicator>
+      </Checkbox.Root>
+    </div>
+    {label && (
+      <>
+        <Typography
+          className={`${s.Label} ${disabled && s.disabled}`}
+          variant={'body2'}
+          as={'label'}
+          htmlFor="c1"
+        >
           {label}
-        </label>
-      </div>
-    </form>
-  )
-}
+        </Typography>
+      </>
+    )}
+  </div>
+)

@@ -1,31 +1,31 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { CustomCheckbox } from './checkbox'
+import { CheckBox } from './checkbox'
 
 const meta = {
-  title: 'Components/CustomCheckbox',
-  component: CustomCheckbox,
+  title: 'Components/CheckBox',
+  component: CheckBox,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof CustomCheckbox>
+} satisfies Meta<typeof CheckBox>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const UncontrolCheckbox: Story = {
+export const UncontrolCheckbox1: Story = {
   args: {
     disabled: false,
   },
 }
 
-export const Checkbox: Story = {
+export const Checkbox1: Story = {
   args: {
     checked: false,
     disabled: false,
   },
 }
 
-export const CheckboxWithLabel: Story = {
+export const CheckboxWithLabel1: Story = {
   args: {
     checked: false,
     disabled: false,
@@ -33,42 +33,42 @@ export const CheckboxWithLabel: Story = {
   },
 }
 
-export const CheckboxChecked: Story = {
+export const CheckboxChecked1: Story = {
   args: {
     checked: true,
     disabled: false,
   },
 }
 
-export const CheckboxCheckedWithLabel: Story = {
+export const CheckboxCheckedWithLabel1: Story = {
   args: {
     checked: true,
     disabled: false,
     label: 'checkbox',
   },
 }
-export const CheckboxDisabled: Story = {
+export const CheckboxDisabled1: Story = {
   args: {
     checked: false,
     disabled: true,
   },
 }
 
-export const CheckboxCheckedDisabled: Story = {
+export const CheckboxCheckedDisabled1: Story = {
   args: {
     checked: true,
     disabled: true,
   },
 }
 
-export const CheckboxWithLabelDisabled: Story = {
+export const CheckboxWithLabelDisabled1: Story = {
   args: {
     checked: false,
     disabled: true,
     label: 'checkbox',
   },
 }
-export const CheckboxCheckedWithLabelDisabled: Story = {
+export const CheckboxCheckedWithLabelDisabled1: Story = {
   args: {
     checked: true,
     disabled: true,
