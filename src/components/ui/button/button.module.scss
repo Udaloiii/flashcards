@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
 
-  //width: 150px;
-  //height: 36px;
+  // width: 150px;
+  // height: 36px;
   padding: 6px 28px;
 
   font-family: var(--font-family);
@@ -118,7 +118,6 @@
 }
 
 .tertiary:active {
-  //color: var(--color-accent-500);
   background-color: var(--color-accent-900);
   border-color: var(--color-accent-700);
   transition: 0.3s;
@@ -142,7 +141,7 @@
   border-color: var(--color-accent-900);
 }
 
-//link
+// link
 .link {
   display: flex;
   align-items: center;
@@ -184,7 +183,7 @@
   color: var(--color-accent-900);
 }
 
-//fullwidth
+// fullwidth
 .fullWidth {
   width: 100%;
 }
