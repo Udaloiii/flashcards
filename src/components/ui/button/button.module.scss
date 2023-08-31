@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 150px;
-  height: 36px;
+  //width: 150px;
+  //height: 36px;
   padding: 6px 28px;
 
   font-family: var(--font-family);
@@ -20,22 +20,27 @@
   border: none;
   border-radius: 4px;
   box-shadow: 0 4px 18px 0 var(--color-accent-500);
-}
 
-.primary:hover {
-  background-color: var(--color-accent-300);
-  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  transition: 0.3s;
 }
 
 .primary:active {
   background-color: var(--color-accent-700);
   box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  transition: 0.3s;
+}
+
+.primary:hover {
+  background-color: var(--color-accent-300);
+  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  transition: 0.3s;
 }
 
 .primary:focus {
-  background-color: var(--color-accent-500);
-  outline: 2px solid var(--color-info-700);
+  background: var(--color-accent-500, #8c61ff);
+  outline: 2px solid var(--info-700, #2f68cc);
   box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  transition: 0.2s;
 }
 
 .primary:disabled {
@@ -61,19 +66,24 @@
   border: none;
   border-radius: 4px;
   box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+
+  transition: 0.3s;
 }
 
 .secondary:hover {
   background-color: var(--color-dark-100);
+  transition: 0.3s;
 }
 
 .secondary:active {
   background-color: var(--color-dark-500);
+  transition: 0.3s;
 }
 
 .secondary:focus {
   background-color: var(--color-dark-300);
   outline: 2px solid var(--color-info-700);
+  transition: 0.3s;
 }
 
 .secondary:disabled {
@@ -96,18 +106,22 @@
   background-color: var(--color-dark-900);
   border: 1px solid var(--color-accent-500);
   border-radius: 4px;
+
+  transition: 0.3s;
 }
 
 .tertiary:hover {
   color: var(--color-accent-500);
   background-color: var(--color-dark-500);
   border-color: var(--color-accent-700);
+  transition: 0.3s;
 }
 
 .tertiary:active {
   //color: var(--color-accent-500);
   background-color: var(--color-accent-900);
   border-color: var(--color-accent-700);
+  transition: 0.3s;
 }
 
 .tertiary:focus {
@@ -118,6 +132,8 @@
   color: var(--color-accent-500);
 
   outline: 1px solid var(--color-info-700);
+
+  transition: 0.3s;
 }
 
 .tertiary:disabled {
@@ -143,20 +159,25 @@
 
   background-color: inherit;
   border: none;
+
+  transition: 0.3s;
 }
 
 .link:hover {
   color: var(--color-accent-300);
+  transition: 0.3s;
 }
 
 .link:active {
   color: var(--color-accent-700);
+  transition: 0.3s;
 }
 
 .link:focus {
   color: var(--color-accent-500);
   border-radius: 130px;
   outline: 2px solid var(--color-info-700);
+  transition: 0.3s;
 }
 
 .link:disabled {

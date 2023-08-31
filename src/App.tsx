@@ -1,22 +1,21 @@
 import { Button } from './components/ui'
-import { CustomCheckbox } from './components/ui/checkbox'
-import { TextField } from './components/ui/text-field'
+import { Header } from './components/ui/header'
 
 export function App() {
   // return <div>Hello</div>
   return (
     <div>
+      <Header>
+        <Button variant={'primary'}>Sign in</Button>
+      </Header>
       <Button onClick={() => console.log('submit')}>SUBMIT</Button>
       <br />
       <br />
       <br />
       <br />
-      <CustomCheckbox />
       <br />
       <br />
       <br />
-      <TextField type={'text'} placeholder={'text'} disabled={true} />
-      <input value={'asdasd'} type={'text'} placeholder={'password'} disabled={true} />
     </div>
   )
 }
