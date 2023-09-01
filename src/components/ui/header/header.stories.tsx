@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from '../button'
+import { DropdownMenuDemo } from '../dropdown-menu'
 
 import { Header } from './header.tsx'
 
@@ -22,6 +23,6 @@ export const HeaderWithButton: Story = {
 
 export const HeaderWithDropDown: Story = {
   args: {
-    children: 'dropdown',
+    children: <DropdownMenuDemo />,
   },
 }
