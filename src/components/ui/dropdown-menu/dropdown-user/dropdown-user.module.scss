@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  padding: 5px;
+
+  &:hover .name {
+    color: var(--color-info-900) !important;
+  }
+
+  &:hover .email {
+    color: var(--color-dark-300) !important;
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  &:active {
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name {
+  padding-left: 10px;
+  color: var(--color-light-100);
+}
+
+.email {
+  padding-top: 1px;
+  padding-left: 10px;
+  color: var(--color-dark-100);
+}

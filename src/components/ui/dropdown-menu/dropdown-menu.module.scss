@@ -7,17 +7,21 @@ button {
 .DropdownMenuSubContent {
   will-change: transform, opacity;
 
-  min-width: 220px;
-  padding: 5px;
+  //min-width: 193px; пока убрал
+  padding: 12px;
 
-  background-color: white;
-  border-radius: 6px;
+  background-color: var(--color-dark-500);
+  border: 1px solid var(--color-dark-100);
+  border-radius: 4px;
   box-shadow:
     0 10px 38px -10px rgb(22 23 24 / 35%),
     0 10px 20px -15px rgb(22 23 24 / 20%);
 
-  animation-duration: 400ms;
-  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  //animation-duration: 400ms;
+  animation-duration: 700ms;
+
+  //animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-timing-function: cubic-bezier(1, 1, 0.5, 1); //  попробую так
 }
 
 .DropdownMenuContent[data-side='top'],
@@ -51,16 +55,21 @@ button {
   display: flex;
   align-items: center;
 
-  height: 25px;
-  padding: 0 5px;
-  padding-left: 25px;
+  //height: 25px;
+  min-height: 25px;
+
+  //padding: 0 5px;
+
+  //padding-left: 25px;
 
   font-size: 13px;
   line-height: 1;
-  color: var(--color-accent-500);
+  color: var(--color-light-100);
 
   border-radius: 3px;
   outline: none;
+
+  transition: transform 0.3s;
 }
 
 .DropdownMenuSubTrigger[data-state='open'] {
@@ -80,8 +89,12 @@ button {
 .DropdownMenuCheckboxItem[data-highlighted],
 .DropdownMenuRadioItem[data-highlighted],
 .DropdownMenuSubTrigger[data-highlighted] {
-  color: var(--color-dark-900);
-  background-color: var(--color-accent-700);
+  transform: scale(1.05);
+  color: var(--color-dark-500);
+
+  //background-color: var(--color-dark-100);
+  background-color: var(--color-accent-100);
+  transition: 0.5s;
 }
 
 .DropdownMenuLabel {
@@ -94,7 +107,7 @@ button {
 .DropdownMenuSeparator {
   height: 1px;
   margin: 5px;
-  background-color: var(--color-accent-700);
+  background-color: var(--color-dark-100);
 }
 
 .DropdownMenuItemIndicator {
@@ -109,7 +122,7 @@ button {
 }
 
 .DropdownMenuArrow {
-  fill: white;
+  fill: var(--color-dark-100);
 }
 
 .IconButton {
@@ -121,19 +134,24 @@ button {
   height: 35px;
 
   font-family: inherit;
-  color: var(--color-accent-700);
 
-  background-color: white;
   border-radius: 100%;
-  box-shadow: 0 2px 10px var(--black-a7);
+
+  transition: transform 0.3s; // я добавил
+}
+
+// я добавил
+.user {
+  user-select: none; // я добавил для того, чтобы нельзя выделить при даблклике
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
 }
 
 .IconButton:hover {
-  background-color: var(--color-accent-900);
-}
-
-.IconButton:focus {
-  box-shadow: 0 0 0 2px black;
+  transform: scale(1.1);
+  background-color: var(--color-light-900);
+  transition: 0.3s;
 }
 
 .RightSlot {
