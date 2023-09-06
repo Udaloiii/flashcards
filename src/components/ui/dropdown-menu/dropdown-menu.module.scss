@@ -7,8 +7,7 @@ button {
 .DropdownMenuSubContent {
   will-change: transform, opacity;
 
-  //min-width: 193px; пока убрал
-  padding: 12px;
+  padding: 10px; // пофиксил
 
   background-color: var(--color-dark-500);
   border: 1px solid var(--color-dark-100);
@@ -85,17 +84,17 @@ button {
   color: var(--color-dark-300);
 }
 
-.DropdownMenuItem[data-highlighted],
-.DropdownMenuCheckboxItem[data-highlighted],
-.DropdownMenuRadioItem[data-highlighted],
-.DropdownMenuSubTrigger[data-highlighted] {
-  transform: scale(1.05);
-  color: var(--color-dark-500);
-
-  //background-color: var(--color-dark-100);
-  background-color: var(--color-accent-100);
-  transition: 0.5s;
-}
+//.DropdownMenuItem[data-highlighted],
+//.DropdownMenuCheckboxItem[data-highlighted],
+//.DropdownMenuRadioItem[data-highlighted],
+//.DropdownMenuSubTrigger[data-highlighted] {
+//  transform: scale(1.05);
+//  color: var(--color-dark-500);
+//
+//  //background-color: var(--color-dark-100);
+//  background-color: var(--color-accent-100);
+//  transition: 0.5s;
+//}
 
 .DropdownMenuLabel {
   padding-left: 25px;
