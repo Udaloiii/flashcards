@@ -7,6 +7,7 @@ import s from './dropdown-user.module.scss'
 
 type DropdownUserProps = {
   className?: string
+  onSelect?: () => void
 }
 export const DropdownUser = ({ className }: DropdownUserProps) => {
   return (
